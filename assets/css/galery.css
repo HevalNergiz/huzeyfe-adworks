@@ -1,0 +1,247 @@
+.section-fluid-main {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  /*width: calc(100% - 40px);*/
+  /*padding-right: 15px;*/
+  /*padding-left: 15px;*/
+  margin-right: auto;
+  margin-left: auto;
+  /*max-width: 1140px;*/
+  /*padding: 100px 0;*/
+  margin-bottom: 2rem;
+}
+
+.section-row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.portfoliopage .section-row:hover .section-col {
+  opacity: 1;
+}
+
+.section-row:hover .section-col {
+  opacity: 0.2;
+}
+
+.section-col {
+  position: relative;
+  width: 100%;
+  -ms-flex: 0 0 50%;
+  flex: 0 0 33.333333333%;
+  max-width: 50%;
+  transition: opacity 250ms linear;
+  padding: .5rem;
+}
+
+.section-row .section-col:hover {
+  opacity: 1;
+}
+
+.section {
+  position: relative;
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 0rem;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #318a92;
+}
+
+.section-in {
+  position: relative;
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 0;
+  cursor: pointer;
+}
+
+.section-in img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform 250ms linear;
+}
+
+.section-col:hover .section-in img {
+  transform: scale(1.2) rotate(0deg);
+}
+
+.hover-text {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 100;
+  pointer-events: none;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center;
+  text-align: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  mix-blend-mode: difference;
+  display: none;
+}
+
+.hover-text h2 {
+  font-family: 'Montserrat';
+  font-weight: 800;
+  font-size: 8vw;
+  line-height: 1;
+  color: #fff;
+  opacity: 0;
+  transform: scale(0.8);
+  transition: transform 250ms linear, opacity 250ms ease;
+}
+
+.section-col:hover + .hover-text h2 {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.logo {
+  position: fixed;
+  top: 25px;
+  left: 25px;
+  display: block;
+  z-index: 1000;
+  transition: all 250ms linear;
+}
+
+.logo img {
+  height: 26px;
+  width: auto;
+  display: block;
+  transition: filter 250ms 700ms linear;
+}
+
+@media (max-width: 767px) {
+  .section-col {
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .hover-text h2 {
+    font-size: 12vw;
+  }
+}
+
+.fotokapagi {
+  position: absolute;
+  height: 100%;
+  top: 0;
+  width: 100%;
+  border-radius: 0;
+  display: grid;
+  align-items: end;
+  background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.46));
+}
+
+.section-col h4 {
+  color: #fff;
+  margin-bottom: 0;
+  font-family: 'Zilla Slab';
+}
+
+.portfoliopage .section-col h4 {
+  color: #000000;
+  margin-bottom: 0;
+  font-family: 'Zilla Slab';
+  text-decoration: none;
+}
+
+.fotokapagi p {
+  margin-bottom: 0;
+  color: rgba(255,255,255,0.73);
+  font-weight: 200;
+  font-family: 'Montserrat';
+}
+
+.mycont {
+  /*max-width: 1200px;*/
+}
+
+@media (max-width: 768px) {
+  .carousel-item .col {
+    display: grid;
+    align-items: center;
+    font-family: 'Montserrat';
+  }
+}
+
+@media (min-width: 768px) {
+  .carousel-item .col {
+    display: grid;
+    align-items: center;
+    font-family: 'Montserrat';
+  }
+}
+
+.carousel-item .col:last-child img {
+  margin: auto;
+  max-width: 70%;
+}
+
+.carousel-indicators [data-bs-target]:hover {
+  transform: scale(1.5);
+  margin: 0 1rem;
+}
+
+.carousel-indicators li.active {
+  opacity: 1;
+  filter: grayscale(0%);
+}
+
+.carousel-indicators li {
+  transition-duration: 5s!important;
+}
+
+.carousel-indicators li.active::after {
+  position: absolute;
+  content: "";
+  width: 7px;
+  height: 7px;
+  background-color: #318a92;
+  bottom: -13px;
+  left: 50%;
+  border-radius: 50%;
+  transform: translateX(-50%);
+}
+
+.carousel-control-next {
+  justify-content: end;
+}
+
+.carousel-control-prev {
+  justify-content: start;
+}
+
+.carousel-control-next-icon:hover, .carousel-control-prev-icon:hover {
+  background-color: #f2f4f8;
+  transform: scale(1.2);
+}
+

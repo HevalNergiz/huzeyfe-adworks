@@ -1,0 +1,159 @@
+:root {
+  --marquee-width: 100%;
+  /*--marquee-height: 20vh;*/
+  /*--marquee-elements: 12;*/
+  --marquee-elements-displayed: 5;
+  --marquee-element-width: calc(var(--marquee-width) / var(--marquee-elements-displayed));
+  --marquee-animation-duration: calc(var(--marquee-elements) * 3s);
+}
+
+.marquee {
+  width: var(--marquee-width);
+  height: var(--marquee-height);
+  /*background-color: #111;*/
+  color: #eee;
+  overflow: hidden;
+  position: relative;
+}
+
+.marquee:before, .marquee:after {
+  position: absolute;
+  top: 0;
+  width: 10rem;
+  height: 100%;
+  content: "";
+  z-index: 1;
+}
+
+.marquee:before {
+  left: 0;
+  background: linear-gradient(to right, #00b2c2 0%, transparent 100%);
+}
+
+.marquee:after {
+  right: 0;
+  background: linear-gradient(to left, #00b2c2 0%, transparent 100%);
+}
+
+.marquee-content {
+  list-style: none;
+  height: 100%;
+  display: flex;
+  animation: scrolling var(--marquee-animation-duration) linear infinite;
+  gap: 1rem;
+}
+
+/* .marquee-content:hover {
+  animation-play-state: paused;
+} */
+
+@keyframes scrolling {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-1 * var(--marquee-element-width) * var(--marquee-elements)));
+  }
+}
+
+.marquee-content li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /*text-align: center;*/
+  flex-shrink: 0;
+  width: var(--marquee-element-width);
+  max-height: 100%;
+  font-size: calc(var(--marquee-height)*3/4);
+  white-space: nowrap;
+}
+
+.marquee-content li img {
+  width: 100%;
+  /*height: 100%;*/
+  border: 1px solid #ffffff;
+  /*background-color: rgba(249,249,249,0.42);*/
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  background: linear-gradient(142deg, rgba(255,255,255,0.59) 1%, rgba(255,255,255,0.31));
+}
+
+@media (max-width: 600px) {
+  html {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 600px) {
+  :root {
+    --marquee-width: 100%;
+    --marquee-height: 16vh;
+    --marquee-elements-displayed: 3;
+  }
+}
+
+@media (max-width: 600px) {
+  .marquee:before, .marquee:after {
+    width: 5rem;
+  }
+}
+
+.hizmet_kutu::after {
+  position: absolute;
+  display: grid;
+  content: "Teklif Al";
+  background-color: #318a92;
+  color: #fff;
+  width: 100%;
+  height: 0;
+  top: 0;
+  left: 0;
+  align-items: center;
+  justify-content: center;
+  transition-duration: .5s;
+  border-width: 1px;
+  border-style: solid;
+}
+
+.hizmet_kutu:hover::after {
+  height: 100%;
+  z-index: 2;
+}
+
+.hizmet_kutu:hover .hizmet_icon {
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 9999999999999999999;
+  width: 2rem;
+  background-color: #dcfcff;
+}
+
+.section-col h4.modal-title {
+  color: #000;
+}
+
+.portfoliopage a {
+  text-decoration: none;
+}
+
+.portfoliopage .section {
+  padding: .5rem .5rem 1rem .5rem;
+}
+
+.secbaslikdiv {
+  padding-top: 1rem;
+  position: relative;
+}
+
+.portfoliopage .section p {
+  color: #818181;
+  font-family: 'Montserrat';
+  margin-bottom: 0;
+}
+
+.portfolyoicon {
+  position: absolute;
+  bottom: 0;
+  right: .5rem;
+}
+
