@@ -25,8 +25,10 @@
   opacity: 1;
 }
 
-.section-row:hover .section-col {
-  opacity: 0.2;
+@media (min-width: 768px) {
+  .section-row:hover .section-col {
+    opacity: 0.2;
+  }
 }
 
 .section-col {
