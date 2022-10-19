@@ -103,7 +103,7 @@
   -ms-flex-item-align: center;
   align-self: center;
   mix-blend-mode: difference;
-  display: none;
+  z-index: 3;
 }
 
 .hover-text h2 {
