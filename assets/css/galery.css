@@ -25,17 +25,21 @@
   opacity: 1;
 }
 
-@media (min-width: 768px) {
-  .section-row:hover .section-col {
-    opacity: 0.2;
-  }
-}
-
 .section-col {
   position: relative;
   width: 100%;
   -ms-flex: 0 0 50%;
-  flex: 0 0 33.333333333%;
+  flex: 0 0 50%;
+  max-width: 50%;
+  transition: opacity 250ms linear;
+  /*padding: .5rem;*/
+}
+
+.portfoliopage .section-col {
+  position: relative;
+  width: 100%;
+  -ms-flex: 0 0 50%;
+  flex: 0 0 33.33333333333%;
   max-width: 50%;
   transition: opacity 250ms linear;
   padding: .5rem;
@@ -53,8 +57,21 @@
   cursor: pointer;
   padding: 0.5rem;
   border-radius: 0rem;
+  /*border-style: solid;*/
+  /*border-width: 1px;*/
+  /*border-color: #318a92;*/
+}
+
+.blogpage .section {
+  position: relative;
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: .5rem;
   border-style: solid;
-  border-width: 1px;
+  border-width: 0;
   border-color: #318a92;
 }
 
@@ -63,7 +80,7 @@
   display: block;
   width: 100%;
   overflow: hidden;
-  border-radius: 0;
+  border-radius: .5rem;
   cursor: pointer;
 }
 
@@ -71,11 +88,11 @@
   display: block;
   width: 100%;
   height: auto;
-  transition: transform 250ms linear;
+  transition: transform 200ms linear;
 }
 
 .section-col:hover .section-in img {
-  transform: scale(1.2) rotate(0deg);
+  transform: scale(1.1) rotate(0deg);
 }
 
 .hover-text {
@@ -104,22 +121,6 @@
   align-self: center;
   mix-blend-mode: difference;
   z-index: 3;
-}
-
-.hover-text h2 {
-  font-family: 'Montserrat';
-  font-weight: 800;
-  font-size: 8vw;
-  line-height: 1;
-  color: #fff;
-  opacity: 0;
-  transform: scale(0.8);
-  transition: transform 250ms linear, opacity 250ms ease;
-}
-
-.section-col:hover + .hover-text h2 {
-  opacity: 1;
-  transform: scale(1);
 }
 
 .logo {
@@ -196,24 +197,24 @@
 }
 
 @media (min-width: 768px) {
-  .carousel-item .col {
+  .tepecarousel .carousel-item .col {
     display: grid;
     align-items: center;
     font-family: 'Montserrat';
   }
 }
 
-.carousel-item .col:last-child img {
+.tepecarousel .carousel-item .col:last-child img {
   margin: auto;
   max-width: 70%;
 }
 
-.carousel-indicators [data-bs-target]:hover {
+.tepecarousel .carousel-indicators [data-bs-target]:hover {
   transform: scale(1.5);
   margin: 0 1rem;
 }
 
-.carousel-indicators li.active {
+.tepecarousel .carousel-indicators li.active {
   opacity: 1;
   filter: grayscale(0%);
 }
@@ -222,7 +223,7 @@
   transition-duration: 5s!important;
 }
 
-.carousel-indicators li.active::after {
+.tepecarousel .carousel-indicators li.active::after {
   position: absolute;
   content: "";
   width: 7px;
@@ -242,7 +243,7 @@
   justify-content: start;
 }
 
-.carousel-control-next-icon:hover, .carousel-control-prev-icon:hover {
+.tepecarousel .carousel-control-next-icon:hover, .tepecarousel .carousel-control-prev-icon:hover {
   background-color: #f2f4f8;
   transform: scale(1.2);
 }

@@ -33,8 +33,7 @@
 }
 
 .bs-icon.bs-icon-primary {
-  color: var(--bs-white);
-  background: var(--bs-primary);
+  color: gray;
 }
 
 .bs-icon.bs-icon-primary-light {
