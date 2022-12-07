@@ -206,7 +206,7 @@
 
 @media (max-width: 768px) {
   .carousel-aciklama {
-    line-height: 24px;
+    line-height: 20px;
     margin-bottom: 4rem;
   }
 }
@@ -256,7 +256,7 @@
 
 @media (min-width: 768px) {
   .mynewheading {
-    line-height: 82px;
+    line-height: 70px;
   }
 }
 
@@ -267,7 +267,7 @@
 }
 
 .miniparagraph {
-  font-family: 'Montserrat';
+  font-family: 'Zilla Slab';
   font-weight: 300;
   /*line-height: 38px;*/
   margin-bottom: 1rem;
@@ -275,7 +275,7 @@
 
 @media (max-width: 768px) {
   .miniparagraph {
-    line-height: 30px;
+    line-height: 24px;
   }
 }
 
@@ -330,8 +330,8 @@
   max-width: 80vw;
   position: absolute;
   top: 6rem;
-  right: 0;
-  /*transform: translateX(50%);*/
+  left: 50%;
+  transform: translateX(-50%);
   z-index: -2;
   opacity: .3;
 }
@@ -445,7 +445,7 @@
   width: 1.5em;
   height: 1.5em;
   vertical-align: middle;
-  background-image: url("../../assets/img/toggle.svg");
+  /*background-image: url("../../assets/img/toggle.svg");*/
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100%;

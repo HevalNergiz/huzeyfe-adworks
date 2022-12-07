@@ -318,7 +318,7 @@ footer .bs-icon {
 .rocketlink {
   position: absolute;
   top: 10rem;
-  right: 4vw;
+  right: 2rem;
   -webkit-animation: float 3s ease-in-out infinite;
   animation: float 3s ease-in-out infinite;
 }
@@ -438,6 +438,51 @@ footer .bs-icon {
 @media (min-width: 768px) {
   .blogyazisi {
     max-width: 70%;
+  }
+}
+
+@media (min-width: 768px) {
+  .daraltbaslik {
+    line-height: 70px;
+  }
+}
+
+@media (min-width: 768px) {
+  .navbar-nav {
+    gap: 1rem;
+  }
+}
+
+.navbar-nav .nav-link {
+  text-align: center;
+  /*padding-right: 1rem;*/
+}
+
+@media (max-width: 768px) {
+  .tepecarousel .carousel-indicators {
+    bottom: 7rem!important;
+  }
+}
+
+@media (min-width: 768px) {
+  .fas.fa-quote-left {
+    margin-bottom: 2rem;
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .fas.fa-quote-left {
+    margin-bottom: 1rem;
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbarsmotherdiv {
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    background-color: rgba(255,255,255,0.83);
   }
 }
 
