@@ -101,7 +101,7 @@
 .hizmet_kutu::after {
   position: absolute;
   display: grid;
-  content: "Teklif Al";
+  content: "İncele";
   background-color: #318a92;
   color: #fff;
   width: 100%;
@@ -197,7 +197,6 @@
   /*background-color: rgba(255,255,255,0.7);*/
   /*backdrop-filter: blur(3px);*/
   /*-webkit-backdrop-filter: blur(3px);*/
-  position: fixed;
   top: 0;
   width: 100%;
   z-index: 9;
@@ -299,6 +298,7 @@ footer .bs-icon {
   border-radius: .25rem;
   margin-right: 0;
   margin-bottom: 2rem;
+  overflow-x: hidden;
 }
 
 .hizmetlerrow-2 img {
@@ -484,5 +484,196 @@ footer .bs-icon {
     -webkit-backdrop-filter: blur(3px);
     background-color: rgba(255,255,255,0.83);
   }
+}
+
+@media (max-width: 768px) {
+  .mycont {
+    max-width: 95%;
+  }
+}
+
+.section-col .section {
+  padding: .5rem;
+}
+
+.navbarsmotherdiv.hide {
+  transform: translateY(-100%);
+}
+
+.navmenu {
+  left: 50%;
+  transform: translateX(-50%);
+  width: 8rem;
+  display: flex;
+  gap: 1rem;
+  height: 3rem;
+  border-radius: 3rem;
+  position: fixed;
+  background-color: #318a92;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.2rem;
+  z-index: 3;
+  bottom: 1.5rem;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  color: #fff;
+}
+
+.floatsearchbutton.showit .navmenu {
+  bottom: 0;
+}
+
+.navmenu.expand {
+  width: 80vw;
+  padding: 1rem 1.5rem 6rem;
+  height: 16rem;
+  border-radius: 0;
+}
+
+.navmenu a {
+  color: #fff;
+  text-decoration: none;
+  font-family: 'Zilla Slab';
+}
+
+.navmenu li:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+.w-33 {
+  /*width: 33%;*/
+}
+
+.floatsearchbutton.showit .navmenu.expand ul {
+  display: block;
+  opacity: 1;
+}
+
+.navmenu ul a {
+  /*display: block;*/
+  /*opacity: 0;*/
+  pointer-events: none;
+}
+
+.navmenu ul {
+  transition-duration: .2s;
+}
+
+@media (min-width: 768px) {
+  .floatsearchbutton, .navmenu {
+    display: none;
+  }
+}
+
+.navmenu.expand ul a {
+  pointer-events: all;
+}
+
+.navmenu.expand ul {
+  opacity: 1;
+}
+
+.navmenu ul {
+  opacity: 0;
+}
+
+@media (min-width: 768px) {
+  .navbarsmotherdiv {
+    position: fixed;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-brand {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    height: 0!important;
+    padding: 0!important;
+  }
+}
+
+@media (min-width: 768px) {
+  .floatsearchbutton.showit {
+    display: none;
+  }
+}
+
+footer a {
+  text-decoration: none;
+}
+
+footer p {
+}
+
+footer {
+  font-family: 'Zilla Slab';
+}
+
+footer {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  footer .col:last-child .list-inline {
+    padding-bottom: 4rem;
+    display: block;
+  }
+}
+
+.floatsearchbutton.showit.expand {
+  width: 80vw;
+  justify-content: space-between;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.floatsearchbutton button {
+  background: none;
+  border: none;
+  color: #fff;
+  display: grid;
+  align-items: center;
+  font-size: 1.5rem;
+}
+
+.floatsearchbutton.showit .closeicon {
+  opacity: 0;
+  position: fixed;
+  right: 50%;
+  transition-duration: .2s;
+}
+
+.floatsearchbutton.showit.expand .closeicon {
+  opacity: 1;
+  /*position: static;*/
+  right: 1rem;
+}
+
+.floatsearchbutton.expand .anasayfayadon {
+  display: block!important;
+}
+
+.floatsearchbutton .anasayfayadon {
+  display: none;
+  color: #fff;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.floatsearchbutton.expand .menuyazisi {
+  display: none;
+}
+
+.floatsearchbutton .menuyazisi {
+  display: inline-block;
 }
 

@@ -17,6 +17,8 @@
     <link rel="stylesheet" href="assets/css/galery.css">
     <link rel="stylesheet" href="assets/css/horizontal-scroll/marquee.css">
     <link rel="stylesheet" href="https://use.typekit.net/skn8ash.css">
+    <link rel="stylesheet" href="assets/css/my-float-button.css">
+    <link rel="stylesheet" href="assets/css/mymenu-bg.css">
     <link rel="stylesheet" href="assets/css/untitled-1.css">
     <link rel="stylesheet" href="assets/css/untitled.css">
 </head>
@@ -24,11 +26,11 @@
 <body>
     <div class="navbarsmotherdiv">
         <nav class="navbar navbar-light navbar-expand-md container">
-            <div class="container-fluid"><a class="navbar-brand" href="#"><img src="assets/img/logo.svg" style="max-width: 11rem;"></a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="container-fluid"><a class="navbar-brand" href="index.html"><img src="assets/img/logo.svg" style="max-width: 11rem;"></a><button data-bs-toggle="collapse" class="navbar-toggler d-none" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navcol-1">
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link" href="#hizmetler">hizmetler</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#referanslar">referanslar</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/hakkimizda.html#hizmetler">hizmetler</a></li>
+                        <li class="nav-item"><a class="nav-link" href="referanslar.html">referanslar</a></li>
                         <li class="nav-item"><a class="nav-link" href="portfolio.html">portfolyo</a></li>
                         <li class="nav-item"><a class="nav-link" href="#" data-bs-target="#teklif-modal" data-bs-toggle="modal">teklif al</a></li>
                         <li class="nav-item"><a class="nav-link" href="#">iletişim</a></li>
@@ -134,15 +136,75 @@
                 </div>
                 <div class="col">
                     <ul class="list-inline my-2">
-                        <li class="list-inline-item"><a class="link-secondary" href="#">Portfolyo</a></li>
-                        <li class="list-inline-item"><a class="link-secondary" href="#">iletişim</a></li>
+                        <li class="list-inline-item"><a class="link-secondary" href="portfolio.html">Portfolyo</a></li>
+                        <li class="list-inline-item"><a class="link-secondary" href="iletisim.html">iletişim</a></li>
                     </ul>
                 </div>
             </div>
         </div>
-    </footer>
+    </footer><a id="floatsearchbutton" class="floatsearchbutton showit" onclick="mobileMenuopen()">
+        <div class="d-flex align-items-center gap-2"><span class="anasayfayadon" onclick="goHome(); return false">Anasayfaya Dön</span><span class="menuyazisi">Menü</span><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-chevron-right anasayfayadon">
+                <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"></path>
+            </svg><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-grid-fill menuyazisi">
+                <path d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5v-3zm8 0A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5v-3zm-8 8A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5v-3zm8 0A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5v-3z"></path>
+            </svg></div><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-x-circle-fill closeicon">
+            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z"></path>
+        </svg>
+    </a>
+    <div id="navmenu" class="navmenu">
+        <div class="w-33">
+            <ul class="list-unstyled mb-0">
+                <li><a href="hakkimizda.html#hizmetler">hizmetler</a></li>
+                <li><a href="referanslar.html">referanslar</a></li>
+            </ul>
+        </div>
+        <div class="w-33">
+            <ul class="list-unstyled mb-0">
+                <li><a href="portfolio.html">portfolyo</a></li>
+                <li><a href="iletisim.html">iletişim</a></li>
+            </ul>
+        </div>
+        <div class="w-33">
+            <ul class="list-unstyled mb-0">
+                <li><a href="blog.html">blog</a></li>
+                <li><a href="" data-bs-target="#teklif-modal" data-bs-toggle="modal">Teklif Al</a></li>
+            </ul>
+        </div>
+    </div>
+    <div id="mymenu-bg" class="mymenubg" onclick="mobileMenuclose()"></div>
+    <div class="modal fade" role="dialog" tabindex="-1" id="teklif-modal">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content" style="border-radius: 0;">
+                <div class="modal-header">
+                    <h4 class="modal-title" style="width: 100%;text-align: center;font-family: 'Zilla Slab';">Teklif Al</h4><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3"><input class="form-control" type="text" id="name-1" name="name" placeholder="Adınız" required=""></div>
+                        <div class="mb-3"><input class="form-control" type="email" id="email-1" name="email" placeholder="Email" required=""></div>
+                        <div class="mb-3"><input class="form-control" type="tel" placeholder="Telefon Numaranız" name="Telefon" required=""></div>
+                        <div class="mb-3"><select class="form-select form-control">
+                                <option value="hizmet-secilmedi">Almak İstediğiniz Hizmeti Seçin</option>
+                                <option value="kreatif">Kreatif</option>
+                                <option value="logo">Logo</option>
+                                <option value="kurumsal-kimlik">Kurumsal Kimlik</option>
+                                <option value="web">Web</option>
+                                <option value="basili">Basılı</option>
+                                <option value="fotograf">Fotoğraf</option>
+                                <option value="film">Film</option>
+                                <option value="maskot-modelleme">Maskot Modelleme</option>
+                                <option value="pr-yonetimi">PR Yönetimi</option>
+                            </select></div>
+                        <div class="mb-3"><textarea class="form-control" id="message-1" name="message" rows="3" placeholder="Mesajınız" required=""></textarea></div>
+                        <div><button class="btn btn-outline-dark w-100" type="submit" style="border-radius: 0;font-family: 'Zilla Slab';height: 3rem;">Gönder</button></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/smart-forms.min.js"></script>
     <script src="assets/js/bs-init.js"></script>
     <script src="assets/js/horizontal-scroll/marquee.js"></script>
     <script src="assets/js/navbar.js"></script>

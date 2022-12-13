@@ -1,0 +1,44 @@
+.mymenubg {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 50%;
+  bottom: 0%;
+  transform: translateX(-50%);
+  z-index: 2;
+  background-color: rgba(0,0,0,0.14);
+  transition-duration: .5s;
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(3px);
+  display: none;
+  overflow: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+* {
+  /*outline: none;*/
+  /*padding: 0;*/
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  outline: none;
+  padding: 0;
+}
+
+*::after {
+  margin: 0;
+  padding: 0;
+}
+
+*::before {
+  margin: 0;
+  padding: 0;
+}
+

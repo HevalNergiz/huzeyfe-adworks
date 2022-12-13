@@ -55,7 +55,6 @@
   width: 100%;
   overflow: hidden;
   cursor: pointer;
-  padding: 0.5rem;
   border-radius: 0rem;
   /*border-style: solid;*/
   /*border-width: 1px;*/
@@ -141,6 +140,14 @@
 
 @media (max-width: 767px) {
   .section-col {
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .portfoliopage .section-col {
     -ms-flex: 0 0 100%;
     flex: 0 0 100%;
     max-width: 100%;
